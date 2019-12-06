@@ -34,7 +34,7 @@ app.get('/', (req, resp)=>{
 app.post('/login',(request, response)=>{
     app.use(cobrarTokenJWT);
     var body = request.body;
-    if(body.username == 'usuario' && body.password == 'teste123'){
+    if(body.username == 'usuario' && body.password == '123456'){
         const id = 1;
         var token = jwt.sign({username: 'usuario', role: 'admin'}, SEGREDO,{
             expiresIn: '10h'
